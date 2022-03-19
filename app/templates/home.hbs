@@ -4,10 +4,15 @@
   class='route-container'
   style='background: url({{this.backgroundImgUrl}});'
 >
-  <nav class="navbar navbar-light home-navbar">
+  <nav class="navbar navbar-light navbar-expand-lg home-navbar">
     <LinkTo @route="settings" class="settings-link">
       <Icons::Gear/>
     </LinkTo>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active"><TimeDisplay/></li>
+      </ul>
+    </div>
   </nav>
 
   <SearchBar />
