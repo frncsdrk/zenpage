@@ -1,0 +1,12 @@
+{{page-title "Home"}}
+
+<div class="route-container" style="background: url({{this.backgroundImgUrl}});">
+  <nav>
+    <LinkTo @route="settings" >Settings</LinkTo>
+  </nav>
+
+  <h1>Home</h1>
+  {{this.backgroundImgUrl}}
+
+  {{outlet}}
+</div>
