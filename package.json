@@ -71,6 +71,9 @@
   "ember": {
     "edition": "octane"
   },
+  "volta": {
+    "node": "16.13.2"
+  },
   "browserslist": {
     "production": [
       "last 2 version",
