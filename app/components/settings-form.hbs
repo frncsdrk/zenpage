@@ -1,0 +1,26 @@
+<form onsubmit="return false;">
+  <div class='mb-3 form-check'>
+    <input
+      type='checkbox'
+      class='form-check-input'
+      id='configure-search-engine'
+      value={{@settings.configureSearch}}
+      {{ on "change" this.setConfigureSearch }}
+    />
+    <label class='form-check-label' for='configure-search-engine'>Configure
+      search engine</label>
+  </div>
+  <div class='mb-3'>
+    <label for='search-engine-input' class='form-label'>Search engine</label>
+    <input
+      type='text'
+      class='form-control'
+      id='search-engine-input'
+      aria-describedby='search-engine-help'
+      value={{@settings.searchEngineUrl}}
+    />
+    <div id='search-engine-help' class='form-text'>e.g.
+      https://duckduckgo.com?q=</div>
+  </div>
+  <button type='submit' class='btn btn-primary' {{on "click" this.apply}}>Apply</button>
+</form>
