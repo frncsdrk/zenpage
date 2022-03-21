@@ -1,8 +1,12 @@
 import Service from '@ember/service';
 
 export default class LocalStorageExtraService extends Service {
-  write(key, value) {
-    localStorage.setItem(key, value);
+  write(key, value, options) {
+    if (options && options.stringify) {
+      localStorage.setItem(key, JSON.stringify(value));
+    } else {
+      localStorage.setItem(key, value);
+    }
     return true;
   }
 
