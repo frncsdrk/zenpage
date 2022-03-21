@@ -1,13 +1,16 @@
 import Component from '@glimmer/component';
 
 export default class SearchBarComponent extends Component {
+  get searchEngineUrl() {
+    return this.args.searchEngineUrl || 'https://duckduckgo.com/?q=';
+  }
+
   onKeypress(event) {
-    console.log('event:', event);
+    // console.log('event:', event);
     if (event.key === 'Enter') {
-      window.location.href = `https://duckduckgo.com/?q=${event.target.value.replace(
-        ' ',
-        '+'
-      )}`;
+      window.location.href = `${event.target.getAttribute(
+        'data-search-engine-url'
+      )}${event.target.value.replace(' ', '+')}`;
     }
   }
 }
