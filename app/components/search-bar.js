@@ -8,7 +8,11 @@ export default class SearchBarComponent extends Component {
   }
 
   get searchEngineUrl() {
-    return this.args.searchEngineUrl || 'https://duckduckgo.com/?q=';
+    if (this.args.searchEngineUrl && this.args.configureSearch) {
+      return this.args.searchEngineUrl;
+    } else {
+      return 'https://duckduckgo.com/?q=';
+    }
   }
 
   onKeypress(event) {

@@ -29,6 +29,7 @@
       id="search-engine-input"
       aria-describedby="search-engine-help"
       @value={{mut (get this "searchEngineUrl")}}
+      disabled={{if this.configureSearch false true}}
     />
     <div id="search-engine-help" class="form-text">e.g.
       https://duckduckgo.com?q=</div>

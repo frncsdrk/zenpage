@@ -11,7 +11,7 @@
 
   <TimeDisplay @hidden={{@model.hideTimeDisplay}} />
 
-  <SearchBar @searchEngineUrl={{@model.searchEngineUrl}} @hidden={{this.model.hideSearchBar}} />
+  <SearchBar @searchEngineUrl={{@model.searchEngineUrl}} @configureSearch={{@model.configureSearch}} @hidden={{@model.hideSearchBar}} />
 
   {{outlet}}
 </div>
