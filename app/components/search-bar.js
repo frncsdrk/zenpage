@@ -1,6 +1,12 @@
 import Component from '@glimmer/component';
 
 export default class SearchBarComponent extends Component {
+  get isHidden() {
+    return typeof this.args.hidden === 'undefined' || this.args.hidden
+      ? true
+      : false;
+  }
+
   get searchEngineUrl() {
     return this.args.searchEngineUrl || 'https://duckduckgo.com/?q=';
   }

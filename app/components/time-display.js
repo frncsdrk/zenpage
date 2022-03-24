@@ -25,4 +25,10 @@ export default class TimeDisplayComponent extends Component {
       this.now.getMinutes()
     )}`;
   }
+
+  get isHidden() {
+    return typeof this.args.hidden === 'undefined' || this.args.hidden
+      ? true
+      : false;
+  }
 }

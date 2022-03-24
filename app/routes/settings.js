@@ -7,7 +7,10 @@ export default class SettingsRoute extends Route {
   model() {
     return this.localStorageExtra.read('settings', {
       parse: true,
-      default: {},
+      default: {
+        hideSearchBar: true,
+        hideTimeDisplay: true,
+      },
     });
   }
 }

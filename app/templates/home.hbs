@@ -1,20 +1,16 @@
-{{page-title 'Home'}}
+{{page-title 'Zenpage' replace=true}}
 
 <div
   class='route-container'
   {{prop style=this.background}}
 >
-  <nav class="navbar navbar-light navbar-expand-lg home-navbar">
-    <LinkTo @route="settings" class="settings-link">
-      <Icons::Gear/>
-    </LinkTo>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active"><TimeDisplay/></li>
-      </ul>
-    </div>
-  </nav>
+  <LinkTo @route="settings" class="settings-link">
+    Settings
+  </LinkTo>
 
-  <SearchBar @searchEngineUrl={{@model.searchEngineUrl}} />
+  <TimeDisplay @hidden={{@model.hideTimeDisplay}} />
+
+  <SearchBar @searchEngineUrl={{@model.searchEngineUrl}} @hidden={{this.model.hideSearchBar}} />
+
   {{outlet}}
 </div>
