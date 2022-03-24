@@ -1,0 +1,28 @@
+{{! Button trigger modal }}
+<button
+  type='button'
+  class='btn btn-outline-light position-absolute top-1em right-1em'
+  {{on 'click' this.openModal}}
+>
+  Info
+</button>
+
+{{! Modal }}
+<BsModalSimple
+  @title='Information'
+  @open={{this.isModalOpen}}
+  @onHidden={{this.closeModal}}
+>
+  <p>
+    Welcome to your ZenPage!
+    Here you can take a moment and relax. Go on a new journey, if you feel like it.
+  </p>
+
+  <p>
+    Images provided by Unsplash.
+  </p>
+
+  <p>
+    This modal will only be shown automatically once.
+  </p>
+</BsModalSimple>
