@@ -7,10 +7,15 @@ export default class SettingsFormComponent extends Component {
   @service localStorageExtra;
 
   settings = this.args.settings;
-  @tracked hideSearchBar = typeof this.settings.hideSearchBar;
+  @tracked hideSearchBar = this.settings.hideSearchBar;
   @tracked configureSearch = this.settings.configureSearch;
   @tracked searchEngineUrl = this.settings.searchEngineUrl || '';
   @tracked hideTimeDisplay = this.settings.hideTimeDisplay;
+
+  constructor() {
+    super(...arguments);
+    console.log('loaded settings:', this.settings);
+  }
 
   @action
   apply() {

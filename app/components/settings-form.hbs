@@ -1,48 +1,48 @@
 <form onsubmit="return false;">
-  <div class='mb-3 form-check'>
+  <div class="mb-3 form-check">
     <Input
-      @type='checkbox'
-      class='form-check-input'
-      id='hide-search-bar'
+      @type="checkbox"
+      class="form-check-input"
+      id="hide-search-bar"
       @checked={{mut (get this "hideSearchBar")}}
     />
-    <label class='form-check-label' for='hide-search-bar'>
+    <label class="form-check-label" for="hide-search-bar">
       Hide Search Bar
     </label>
   </div>
-  <div class='mb-3 form-check'>
+  <div class="mb-3 form-check">
     <Input
-      @type='checkbox'
-      class='form-check-input'
-      id='configure-search-engine'
+      @type="checkbox"
+      class="form-check-input"
+      id="configure-search-engine"
       @checked={{mut (get this "configureSearch")}}
     />
-    <label class='form-check-label' for='configure-search-engine'>
+    <label class="form-check-label" for="configure-search-engine">
       Configure search engine
     </label>
   </div>
-  <div class='mb-3'>
-    <label for='search-engine-input' class='form-label'>Search engine</label>
+  <div class="mb-3">
+    <label for="search-engine-input" class="form-label">Search engine</label>
     <Input
-      @type='text'
-      class='form-control'
-      id='search-engine-input'
-      aria-describedby='search-engine-help'
+      @type="text"
+      class="form-control"
+      id="search-engine-input"
+      aria-describedby="search-engine-help"
       @value={{mut (get this "searchEngineUrl")}}
     />
-    <div id='search-engine-help' class='form-text'>e.g.
+    <div id="search-engine-help" class="form-text">e.g.
       https://duckduckgo.com?q=</div>
   </div>
-  <div class='mb-3 form-check'>
+  <div class="mb-3 form-check">
     <Input
-      @type='checkbox'
-      class='form-check-input'
-      id='hide-time-display'
+      @type="checkbox"
+      class="form-check-input"
+      id="hide-time-display"
       @checked={{mut (get this "hideTimeDisplay")}}
     />
-    <label class='form-check-label' for='hide-time-display'>
+    <label class="form-check-label" for="hide-time-display">
       Hide Time Display
     </label>
   </div>
-  <button type='submit' class='btn btn-primary' {{on "click" this.apply}}>Apply</button>
+  <button type="submit" class="btn btn-primary" {{on "click" this.apply}}>Apply</button>
 </form>

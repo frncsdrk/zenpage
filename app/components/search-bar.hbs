@@ -1,15 +1,15 @@
-<div class='position-absolute top-50 start-50 translate-middle {{if this.isHidden "visually-hidden" ""}}'>
-  <div class='input-group mb-3'>
+<div class="position-absolute top-50 start-50 translate-middle {{if this.isHidden "visually-hidden" ""}}">
+  <div class="input-group mb-3">
     <input
-      type='text'
-      class='form-control'
-      placeholder='Search'
-      aria-label='Search'
-      aria-describedby='basic-addon2'
+      type="text"
+      class="form-control"
+      placeholder="Search"
+      aria-label="Search"
+      aria-describedby="basic-addon2"
       data-search-engine-url={{this.searchEngineUrl}}
-      {{on 'keypress' this.onKeypress}}
+      {{on "keypress" this.onKeypress}}
     />
-    <span class='input-group-text' id='basic-addon2'>
+    <span class="input-group-text" id="basic-addon2">
       <Icons::ArrowReturnLeft/>
     </span>
   </div>

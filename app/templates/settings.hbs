@@ -1,6 +1,15 @@
 {{page-title "Settings" prepend=false}}
 
-<h1>Settings</h1>
+<div class="route-container">
+  <LinkTo @route="home" class="btn btn-outline-dark">
+    <Icons::ArrowLeft />
+    Home
+  </LinkTo>
 
-<SettingsForm @settings={{@model}} />
-{{outlet}}
+  <div class="container">
+    <h1>Settings</h1>
+
+    <SettingsForm @settings={{@model}} />
+  </div>
+  {{outlet}}
+</div>
