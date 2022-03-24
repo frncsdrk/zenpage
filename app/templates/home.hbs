@@ -1,9 +1,6 @@
 {{page-title 'Zenpage' replace=true}}
 
-<div
-  class="route-container"
-  {{prop style=this.background}}
->
+<RouteContainer @settings={{@model}}>
   <LinkTo @route="settings" class="btn btn-outline-light">
     <Icons::Gear class="align-text-bottom" />
     Settings
@@ -16,4 +13,4 @@
   <SearchBar @searchEngineUrl={{@model.searchEngineUrl}} @configureSearch={{@model.configureSearch}} @hidden={{@model.hideSearchBar}} />
 
   {{outlet}}
-</div>
+</RouteContainer>
