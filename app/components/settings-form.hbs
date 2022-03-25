@@ -11,19 +11,55 @@
     </label>
   </div>
 
-  <div class='mb-3 form-check'>
-    <Input
-      @type='checkbox'
-      class='form-check-input'
-      id='configure-search-engine'
-      @checked={{mut (get this 'configureSearch')}}
-    />
-    <label class='form-check-label' for='configure-search-engine'>
-      Configure search engine
-    </label>
+  <div class='mb-3'>
+    <h6>Search engine presets</h6>
+    <div
+      id="search-engine-preset-select"
+      class='btn-group'
+      role='group'
+      aria-describedby='search-engine-preset-help'
+    >
+      <Input
+        @type='checkbox'
+        class='btn-check'
+        id='btncheckbox-preset-ddg'
+        @checked={{call (fn this.getSearchEnginePreset "duckduckgo")}}
+        {{on "change" (fn this.setSearchEnginePreset "duckduckgo")}}
+      />
+      <label
+        class='btn btn-outline-primary'
+        for='btncheckbox-preset-ddg'
+      >DuckDuckGo</label>
+
+      <Input
+        @type='checkbox'
+        class='btn-check'
+        id='btncheckbox-preset-ecosia'
+        @checked={{call (fn this.getSearchEnginePreset "ecosia")}}
+        {{on "change" (fn this.setSearchEnginePreset "ecosia")}}
+      />
+      <label
+        class='btn btn-outline-primary'
+        for='btncheckbox-preset-ecosia'
+      >Ecosia</label>
+
+      <Input
+        @type='checkbox'
+        class='btn-check'
+        id='btncheckbox-preset-custom'
+        @checked={{call (fn this.getSearchEnginePreset "custom")}}
+        {{on "change" (fn this.setSearchEnginePreset "custom")}}
+      />
+      <label
+        class='btn btn-outline-primary'
+        for='btncheckbox-preset-custom'
+      >Custom</label>
+    </div>
+    <div id='search-engine-preset-help' class='form-text'>e.g. Select a
+      preconfigured search engine</div>
   </div>
   <div class='mb-3'>
-    <label for='search-engine-input' class='form-label'>Search engine</label>
+    <label for='search-engine-input' class='form-label'>Search engine query URL</label>
     <Input
       @type='text'
       class='form-control'

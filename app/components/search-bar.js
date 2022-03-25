@@ -1,26 +1,21 @@
 import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
 export default class SearchBarComponent extends Component {
+  @tracked searchEngineUrl = this.args.searchEngineUrl;
+
   get isHidden() {
     return typeof this.args.hidden === 'undefined' || this.args.hidden
       ? true
       : false;
   }
 
-  get searchEngineUrl() {
-    if (this.args.searchEngineUrl && this.args.configureSearch) {
-      return this.args.searchEngineUrl;
-    } else {
-      return 'https://duckduckgo.com/?q=';
-    }
-  }
-
-  onKeypress(event) {
-    // console.log('event:', event);
+  onKeypress(searchEngineUrl, event) {
     if (event.key === 'Enter') {
-      window.location.href = `${event.target.getAttribute(
-        'data-search-engine-url'
-      )}${event.target.value.replace(' ', '+')}`;
+      window.location.href = `${searchEngineUrl}${event.target.value.replace(
+        ' ',
+        '+'
+      )}`;
     }
   }
 }

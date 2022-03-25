@@ -10,6 +10,8 @@ export default class SettingsRoute extends Route {
       default: {
         hideSearchBar: true,
         hideTimeDisplay: true,
+        searchEnginePreset: 'duckduckgo',
+        searchEngineUrl: 'https://duckduckgo.com?q=',
       },
     });
   }
