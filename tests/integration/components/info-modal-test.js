@@ -12,15 +12,6 @@ module('Integration | Component | info-modal', function (hooks) {
 
     await render(hbs`<InfoModal />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <InfoModal>
-        template block text
-      </InfoModal>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert.dom(this.element).hasText('Information');
   });
 });

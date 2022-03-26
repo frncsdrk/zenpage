@@ -13,14 +13,5 @@ module('Integration | Component | search-bar', function (hooks) {
     await render(hbs`<SearchBar />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <SearchBar>
-        template block text
-      </SearchBar>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

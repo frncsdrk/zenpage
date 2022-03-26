@@ -10,17 +10,18 @@ module('Integration | Component | time-display', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
+    function prependZero(value) {
+      return value < 10 ? '0' + value.toString() : value.toString();
+    }
+
+    const now = new Date();
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
     await render(hbs`<TimeDisplay />`);
 
-    assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <TimeDisplay>
-        template block text
-      </TimeDisplay>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    assert
+      .dom(this.element)
+      .hasText(`${prependZero(hours)}:${prependZero(minutes)}`);
   });
 });

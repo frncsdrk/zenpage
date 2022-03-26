@@ -13,14 +13,5 @@ module('Integration | Component | icons/gear', function (hooks) {
     await render(hbs`<Icons::Gear />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Icons::Gear>
-        template block text
-      </Icons::Gear>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

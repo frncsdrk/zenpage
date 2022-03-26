@@ -13,14 +13,5 @@ module('Integration | Component | icons/info-square', function (hooks) {
     await render(hbs`<Icons::InfoSquare />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Icons::InfoSquare>
-        template block text
-      </Icons::InfoSquare>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });

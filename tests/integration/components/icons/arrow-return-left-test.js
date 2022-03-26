@@ -13,14 +13,5 @@ module('Integration | Component | icons/arrow-return-left', function (hooks) {
     await render(hbs`<Icons::ArrowReturnLeft />`);
 
     assert.dom(this.element).hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Icons::ArrowReturnLeft>
-        template block text
-      </Icons::ArrowReturnLeft>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
   });
 });
