@@ -11,7 +11,7 @@ Photos provided by [unsplash](https://unsplash.com).
 
 ## Usage
 
-- Set [zenpage](https://frncsdrk.github.io/zenpage) as your start page
+- Set [zenpage](https://zenpage.surge.sh) as your start page
 - Instruct your browser to visit your start page, when opening a new tab
 
 ## Prerequisites
