@@ -1,7 +1,18 @@
-# zenpage
+# Zenpage
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ground yourself and start a new journey
+
+Zenpage is an alternative start page.
+
+![default](./docs/screenshot-zenpage-default-v0-1.png "default")
+![with search and time](./docs/screenshot-zenpage-search-time-v0-1.png "with search and time")
+
+Photos provided by [unsplash](https://unsplash.com).
+
+## Usage
+
+- Set [zenpage](https://frncsdrk.github.io/zenpage) as your start page
+- Instruct your browser to visit your start page, when opening a new tab
 
 ## Prerequisites
 
@@ -45,7 +56,10 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This app is deployed via GitHub Pages.
+
+- Run `ember build --environment production`
+- Run `./scripts/publish` to push the dist directory on the `gh-pages` branch
 
 ## Further Reading / Useful Links
 
@@ -54,3 +68,7 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## License
+
+[MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 frncsdrk and contributors
