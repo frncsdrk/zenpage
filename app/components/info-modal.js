@@ -5,6 +5,10 @@ import { tracked } from '@glimmer/tracking';
 export default class InfoModalComponent extends Component {
   @tracked open = false;
 
+  get isHidden() {
+    return this.args.hidden ? true : false;
+  }
+
   get isModalOpen() {
     return this.open;
   }

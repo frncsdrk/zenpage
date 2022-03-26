@@ -1,7 +1,7 @@
 {{! Button trigger modal }}
 <button
   type='button'
-  class='btn btn-outline-light position-absolute top-1em right-1em'
+  class='btn btn-outline-light position-absolute top-1em right-1em {{if this.isHidden "visually-hidden" ""}}'
   {{on 'click' this.openModal}}
 >
   <Icons::InfoSquare class="align-text-bottom" />

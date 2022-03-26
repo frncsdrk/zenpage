@@ -11,6 +11,30 @@
     </label>
   </div>
 
+  <div class='mb-3 form-check'>
+    <Input
+      @type='checkbox'
+      class='form-check-input'
+      id='hide-time-display'
+      @checked={{mut (get this 'hideTimeDisplay')}}
+    />
+    <label class='form-check-label' for='hide-time-display'>
+      Hide Time Display
+    </label>
+  </div>
+
+  <div class='mb-3 form-check'>
+    <Input
+      @type='checkbox'
+      class='form-check-input'
+      id='hide-info-button'
+      @checked={{mut (get this 'hideInfoButton')}}
+    />
+    <label class='form-check-label' for='hide-info-button'>
+      Hide Info Button
+    </label>
+  </div>
+
   <div class='mb-3'>
     <h6>Search engine presets</h6>
     <div
@@ -70,18 +94,6 @@
     />
     <div id='search-engine-help' class='form-text'>e.g.
       https://duckduckgo.com?q=</div>
-  </div>
-
-  <div class='mb-3 form-check'>
-    <Input
-      @type='checkbox'
-      class='form-check-input'
-      id='hide-time-display'
-      @checked={{mut (get this 'hideTimeDisplay')}}
-    />
-    <label class='form-check-label' for='hide-time-display'>
-      Hide Time Display
-    </label>
   </div>
 
   <div class='mb-3 form-check'>

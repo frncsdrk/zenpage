@@ -13,10 +13,11 @@ export default class SettingsFormComponent extends Component {
   };
   settings = this.args.settings;
   @tracked hideSearchBar = this.settings.hideSearchBar;
+  @tracked hideTimeDisplay = this.settings.hideTimeDisplay;
+  @tracked hideInfoButton = this.settings.hideInfoButton;
   @tracked searchEnginePreset = this.settings.searchEnginePreset;
   @tracked configureSearch = this.settings.configureSearch;
   @tracked searchEngineUrl = this.settings.searchEngineUrl;
-  @tracked hideTimeDisplay = this.settings.hideTimeDisplay;
   @tracked configureBackground = this.settings.configureBackground;
   @tracked backgroundUrl = this.settings.backgroundUrl;
 
@@ -58,10 +59,11 @@ export default class SettingsFormComponent extends Component {
   apply() {
     this.settings = {
       hideSearchBar: this.hideSearchBar,
+      hideTimeDisplay: this.hideTimeDisplay,
+      hideInfoButton: this.hideInfoButton,
       searchEnginePreset: this.searchEnginePreset,
       configureSearch: this.configureSearch,
       searchEngineUrl: this.searchEngineUrl,
-      hideTimeDisplay: this.hideTimeDisplay,
       configureBackground: this.configureBackground,
       backgroundUrl: this.backgroundUrl,
     };
