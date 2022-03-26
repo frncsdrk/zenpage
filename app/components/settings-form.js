@@ -42,6 +42,19 @@ export default class SettingsFormComponent extends Component {
   }
 
   @action
+  reset() {
+    this.settings = {
+      hideSearchBar: true,
+      hideTimeDisplay: true,
+      searchEnginePreset: 'duckduckgo',
+      searchEngineUrl: 'https://duckduckgo.com?q=',
+    };
+    this.localStorageExtra.write('settings', this.settings, {
+      stringify: true,
+    });
+  }
+
+  @action
   apply() {
     this.settings = {
       hideSearchBar: this.hideSearchBar,
@@ -53,7 +66,6 @@ export default class SettingsFormComponent extends Component {
       backgroundUrl: this.backgroundUrl,
     };
     console.log('settings:', this.settings);
-    // TODO: Write to localStorage
     this.localStorageExtra.write('settings', this.settings, {
       stringify: true,
     });
