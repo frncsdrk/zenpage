@@ -56,10 +56,9 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-This app is deployed via GitHub Pages.
+This app is deployed via Surge.sh.
 
-- Run `ember build --environment production`
-- Run `./scripts/publish` to push the dist directory on the `gh-pages` branch
+- Run `npm run deploy` to create a production build and push it to surge
 
 ## Further Reading / Useful Links
 

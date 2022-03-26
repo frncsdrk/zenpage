@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Create a `200.html` page as fallback
+
+cat ./dist/index.html > ./dist/200.html
