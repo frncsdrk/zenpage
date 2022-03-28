@@ -14,7 +14,9 @@ Photos provided by [unsplash](https://unsplash.com).
 - Set [zenpage](https://zenpage.surge.sh) as your start page
 - Instruct your browser to visit your start page, when opening a new tab
 
-## Prerequisites
+## Development
+
+### Prerequisites
 
 You will need the following things properly installed on your computer.
 
@@ -23,38 +25,38 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
-## Installation
+### Installation
 
 * `git clone <repository-url>` this repository
 * `cd zenpage`
 * `npm install`
 
-## Running / Development
+### Running / Development
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
-### Code Generators
+#### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
 
-### Running Tests
+#### Running Tests
 
 * `ember test`
 * `ember test --server`
 
-### Linting
+#### Linting
 
 * `npm run lint`
 * `npm run lint:fix`
 
-### Building
+#### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+#### Deploying
 
 This app is deployed via Surge.sh.
 
