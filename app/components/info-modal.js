@@ -13,6 +13,10 @@ export default class InfoModalComponent extends Component {
     return this.open;
   }
 
+  get version() {
+    return '0.1.0';
+  }
+
   @action
   openModal() {
     this.open = true;
