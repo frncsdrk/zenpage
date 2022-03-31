@@ -1,5 +1,7 @@
 # Zenpage
 
+[![test](https://github.com/frncsdrk/zenpage/actions/workflows/test.yml/badge.svg)](https://github.com/frncsdrk/zenpage/actions/workflows/test.yml)
+
 Ground yourself and start a new journey
 
 Zenpage is an alternative start page.
@@ -7,7 +9,7 @@ Zenpage is an alternative start page.
 ![default](./docs/screenshot-zenpage-default-v0-1.png "default")
 ![with search and time](./docs/screenshot-zenpage-search-time-v0-1.png "with search and time")
 
-Photos provided by [unsplash](https://unsplash.com).
+Background photos provided by [unsplash](https://unsplash.com).
 
 ## Usage
 
