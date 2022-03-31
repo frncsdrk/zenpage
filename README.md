@@ -70,6 +70,14 @@ This app is deployed via Surge.sh.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Contributions
+
+See [CONTRIBUTING](https://github.com/frncsdrk/zenpage/blob/main/CONTRIBUTING.md)
+
+## Credits
+
+See [CREDITS](https://github.com/frncsdrk/zenpage/blob/main/CREDITS)
+
 ## License
 
 [MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 frncsdrk and contributors
