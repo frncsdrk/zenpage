@@ -1,6 +1,6 @@
 # Zenpage
 
-[![test](https://github.com/frncsdrk/zenpage/actions/workflows/test.yml/badge.svg)](https://github.com/frncsdrk/zenpage/actions/workflows/test.yml)
+[![test](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml/badge.svg)](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml)
 
 Ground yourself and start a new journey
 
