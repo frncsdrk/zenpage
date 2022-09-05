@@ -14,7 +14,7 @@ export default class InfoModalComponent extends Component {
   }
 
   get version() {
-    return '0.1.2';
+    return '0.1.3';
   }
 
   @action
