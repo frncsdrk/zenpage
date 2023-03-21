@@ -1,85 +1,47 @@
-# Zenpage
+# Svelte + TS + Vite
 
-[![test](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml/badge.svg)](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml)
+This template should help get you started developing with Svelte and TypeScript in Vite.
 
-Ground yourself and start a new journey
+## Recommended IDE Setup
 
-Zenpage is an alternative start page.
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-![default](./docs/screenshot-zenpage-default-v0-1.png "default")
-![with search and time](./docs/screenshot-zenpage-search-time-v0-1.png "with search and time")
+## Need an official Svelte framework?
 
-Background photos provided by [unsplash](https://unsplash.com).
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
-## Usage
+## Technical considerations
 
-- Set [zenpage](https://zenpage.surge.sh) as your start page
-- Instruct your browser to visit your start page, when opening a new tab
+**Why use this over SvelteKit?**
 
-## Development
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
 
-### Prerequisites
+This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
 
-You will need the following things properly installed on your computer.
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
 
-### Installation
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
 
-* `git clone <repository-url>` this repository
-* `cd zenpage`
-* `npm install`
+**Why include `.vscode/extensions.json`?**
 
-### Running / Development
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+**Why enable `allowJs` in the TS template?**
 
-#### Code Generators
+While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
 
-Make use of the many generators for code, try `ember help generate` for more details
+**Why is HMR not preserving my local component state?**
 
-#### Running Tests
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
 
-* `ember test`
-* `ember test --server`
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
 
-#### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
-
-#### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-#### Deploying
-
-This app is deployed via Surge.sh.
-
-- Run `npm run deploy` to create a production build and push it to surge
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
-## Contributions
-
-See [CONTRIBUTING](https://github.com/frncsdrk/zenpage/blob/main/CONTRIBUTING.md)
-
-## Credits
-
-See [CREDITS](https://github.com/frncsdrk/zenpage/blob/main/CREDITS)
-
-## License
-
-[MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 frncsdrk and contributors
+```ts
+// store.ts
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
+```
