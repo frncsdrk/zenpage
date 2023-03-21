@@ -5,11 +5,11 @@
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+  <div class="columns-2">
+    <a href="https://vitejs.dev" target="_blank" rel="noreferrer" class="w-1/2">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
     </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
+    <a href="https://svelte.dev" target="_blank" rel="noreferrer" class="w-1/2">
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
