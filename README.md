@@ -1,18 +1,20 @@
-# create-svelte
+# Zenpage
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+[![test](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml/badge.svg)](https://github.com/frncsdrk/zenpage/actions/workflows/tests.yml)
 
-## Creating a project
+Ground yourself and start a new journey
 
-If you're seeing this, you've probably already done this step. Congrats!
+Zenpage is an alternative start page.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+![default](./docs/screenshot-zenpage-default-v0-1.png "default")
+![with search and time](./docs/screenshot-zenpage-search-time-v0-1.png "with search and time")
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Background photos provided by [unsplash](https://unsplash.com).
+
+## Usage
+
+- Set [zenpage](https://zenpage.surge.sh) as your start page
+- Instruct your browser to visit your start page, when opening a new tab
 
 ## Developing
 
@@ -25,7 +27,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -36,3 +38,15 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Contributions
+
+See [CONTRIBUTING](https://github.com/frncsdrk/zenpage/blob/main/CONTRIBUTING.md)
+
+## Credits
+
+See [CREDITS](https://github.com/frncsdrk/zenpage/blob/main/CREDITS)
+
+## License
+
+[MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 - 2023 frncsdrk and contributors
