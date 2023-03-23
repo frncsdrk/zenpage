@@ -8,7 +8,7 @@
     });
 </script>
 
-<div class="w-screen h-screen bg-[url('{bgUrl}')]">
+<div class="w-screen h-screen bg-[url('{bgUrl}')]" style="background: url({bgUrl});">
     <a href="/settings">Settings</a>
 
     <h1>Welcome to SvelteKit</h1>
