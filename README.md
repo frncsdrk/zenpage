@@ -82,4 +82,4 @@ See [CREDITS](https://github.com/frncsdrk/zenpage/blob/main/CREDITS)
 
 ## License
 
-[MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 frncsdrk and contributors
+[MIT](https://github.com/frncsdrk/zenpage/blob/main/LICENSE) (c) 2022 - 2023 frncsdrk and contributors
